@@ -1,0 +1,10 @@
+.row
+  %form#register-form.form-horizontal.span2.offset1.well{action: '', method: 'post'}
+    .control-group
+      %input#name.input-medium{type:'text', name:'name', placeholder:'Логин'}
+    .control-group
+      %input#pass1.input-medium{type:'password', name:'pass1', placeholder:'Пароль'}
+    .control-group
+      %input#pass2.input-medium{type:'password', name:'pass2', placeholder:'Пароль ещё раз'}
+    .control-group
+      %button#register.btn{type:'submit'} Зарегистрироваться

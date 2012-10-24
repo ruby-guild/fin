@@ -1,0 +1,18 @@
+.row
+  %form#add-form.form-inline.span5.offset1.well{action: '', method: 'post'}
+    %input#title.input-large{type:'text', name:'title', placeholder:'Название'}
+    %input#price.input-mini{type:'text', name:'price', placeholder:'Цена'}
+    %button#add.btn{type:'submit'} Добавить
+
+  .well.span3
+    Текущий баланс:
+    %strong#balance.text-success
+      #{@balance} &#x20B4
+.row
+  #days
+    - for day in @days
+      %ul#items.span5.offset1.well
+        %table.table.table-condensed.table-hover
+          %caption #{day[:day]}
+          - for item in day[:items]
+            =partial :_item, item: item
